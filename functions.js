@@ -1,6 +1,21 @@
 const container = document.querySelector(".container");
 //catching the current div with class container so I can manipulate it
 
+
+container.addEventListener('mouseover', function (event) {
+  //attaching event listener to parent for ease of use
+  if (event.target.matches('.box')) {
+    //if the item in question is box
+    console.log("mouseover event")
+    // todo remove this console log
+    event.target.classList.add('highlight');
+    //add highlight class to it
+  }
+})
+
+
+
+
 makeBoxes(16);
 //create a default number of boxes
 
@@ -28,15 +43,16 @@ function makeBoxes(numBoxes) {
 
   for(let i = 0; i < numBoxes*numBoxes; i++) {
     // loop set to achieve the square by multipling input by itself
-      const box = document.createElement("div");
+      const square = document.createElement("div");
       // create a div
-      box.classList.add("box");
+      square.classList.add("box");
       // add class "box" to id
-      box.textContent = boxNumber;
+      square.textContent = boxNumber;
       // add text in the box of the current number
-      container.append(box);
+      container.append(square);
       // append that box to the container
       boxNumber += 1;
       //increase the number once actions have been completed
   }
 }
+

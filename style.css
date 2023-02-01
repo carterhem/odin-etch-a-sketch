@@ -10,6 +10,6 @@
   text-align: center;
 }
 
-.box:hover {
-  background-color: rgb(200, 146, 228);
+.highlight {
+  background-color: rgb(179, 128, 226);
 }
