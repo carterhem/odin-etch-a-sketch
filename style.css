@@ -9,3 +9,7 @@
   border: 5px solid black;
   text-align: center;
 }
+
+.box:hover {
+  background-color: rgb(200, 146, 228);
+}
