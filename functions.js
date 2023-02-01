@@ -2,6 +2,7 @@ const container = document.querySelector(".container");
 //catching the current div with class container so I can manipulate it
 
 
+
 container.addEventListener('mouseover', function (event) {
   //attaching event listener to parent for ease of use
   if (event.target.matches('.box')) {
@@ -12,9 +13,6 @@ container.addEventListener('mouseover', function (event) {
     //add highlight class to it
   }
 })
-
-
-
 
 makeBoxes(16);
 //create a default number of boxes
@@ -30,6 +28,19 @@ document.querySelector(".createGrid").onclick = function() {
   }
 }
 
+document.querySelector(".removeHighlight").onclick = function() {
+  //captured the button and prompted to run anonymous function when clicked
+  console.log("added again")
+  //todo remove this console.log
+  const highlightedBoxes = document.querySelectorAll(".box.highlight");
+  
+  highlightedBoxes.forEach((item) => {
+      if (item !== null) {
+        item.classList.remove("highlight")
+      }
+    } 
+  )
+}
 
 function makeBoxes(numBoxes) {
   //function to draw the boxes
