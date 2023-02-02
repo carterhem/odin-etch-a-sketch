@@ -1,8 +1,6 @@
 const container = document.querySelector(".container");
 //catching the current div with class container so I can manipulate it
 
-
-
 container.addEventListener('mouseover', function (event) {
   //attaching event listener to parent for ease of use
   if (event.target.matches('.box')) {
@@ -60,9 +58,6 @@ function makeBoxes(numBoxes) {
       // create a div
       square.classList.add("box");
       // add class "box" to it
-      // square.textContent = boxNumber;
-      //todo removing the number requirement from the boxes means everything works out!
-      // add text in the box of the current number
       container.append(square);
       // append that div to the container
       boxNumber += 1;
