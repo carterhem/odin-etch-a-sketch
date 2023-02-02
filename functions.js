@@ -60,7 +60,8 @@ function makeBoxes(numBoxes) {
       // create a div
       square.classList.add("box");
       // add class "box" to it
-      square.textContent = boxNumber;
+      // square.textContent = boxNumber;
+      //todo removing the number requirement from the boxes means everything works out!
       // add text in the box of the current number
       container.append(square);
       // append that div to the container
